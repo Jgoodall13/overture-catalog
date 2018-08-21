@@ -1,0 +1,122 @@
+<style>
+    #footer_wrapper {
+        display: none;
+    }
+
+    .footer-container {
+        color: #7a7a7a;
+        margin-top: 50px;
+        margin-bottom: 50px
+    }
+
+    .overture {
+        color: #ef7521;
+        font-size: 22px;
+        font-family: Proxima-bold;
+    }
+
+    .info {
+        font-size: 22px;
+        line-height: .8;
+    }
+
+    .infoBreak {
+        font-size: 22px;
+        line-height: .8;
+        padding-bottom: 20px
+    }
+
+    .footer-right-nav {
+        text-align: right;
+    }
+
+    .footer-link {
+        color: #7a7a7a;
+        font-size: 20px;
+        padding-left: 25px;
+        text-decoration: none;
+    }
+
+    .footer-link:hover {
+        color: #ef7521;
+        text-decoration: none;
+    }
+
+    .map-paragraph {
+        font-size: 16px;
+        text-align: center
+    }
+
+    .info, .infoBreak, .footer-link{
+        font-weight: 500;
+    }
+
+
+    @media(max-width:991px) {
+        .footer-nav-links {
+            display: none !important;
+        }
+        .footer-right-nav {
+            text-align: left;
+        }
+        .social {
+            margin-left: 0px;
+            margin-right: 35px;
+        }
+        .map-paragraph {
+            text-align: left !important;
+        }
+        .footer-container {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    }
+
+    @media(max-width:767px) {
+        .fa.fa-facebook {
+            margin-left: 0 !important;
+        }
+    }
+</style>
+
+<div class="container footer-container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="address">
+                <h4 class="overture">Overture, LLC</h4>
+                <h5 class="info">595 Lakeview Parkway</h5>
+                <h5 class="infoBreak">Vernon Hills, IL 60061</h5>
+            </div>
+            <div class="phone">
+                <h5 class="info">P. 888.756.9564</h5>
+                <h5 class="info">F. 847.680.0114</h5>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <img src='/assets/img/catalog/map.svg' alt="map" >
+            <p class="map-paragraph">Headquarted in Chicago with over 200 warehouses nationwide</p>
+        </div>
+        <div class="col-md-5 footer-right-nav">
+            <div class="footer-nav-links" style='display: flex; justify-content: flex-end'>
+                <h5 class="footer-link"><a href="" class="footer-link">Contact Us</a></h5>
+                <h5 class="footer-link"><a href="" class="footer-link">Privacy Policy</a></h5>
+                <h5 class="footer-link"><a href="" class="footer-link">Careers</a></h5>
+            </div>
+            <div class="socials" style='padding: 40px 0'>
+                <a href="https://www.facebook.com/OverturePromotions/" target="blank">
+                    <i class="fa fa-facebook" style='color: #ef7521; font-size: 2.2em; margin-left: 35px;'></i>
+                </a>
+                <a href="https://www.instagram.com/overturepromotions/" target="blank">
+                    <i class="fa fa-instagram" style='color: #ef7521; font-size: 2.2em; margin-left: 35px;'></i>
+                </a>
+                <a href="https://twitter.com/overturepromo?lang=en" target="blank">
+                    <i class="fa fa-twitter" style='color: #ef7521; font-size: 2.2em; margin-left: 35px;'></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UC2UrwEV2nWeT1r0buLXRfXw" target="blank">
+                    <i class="fa fa-youtube" style='color: #ef7521; font-size: 2.2em; margin-left: 35px;'></i>
+                </a>
+            </div>
+            <h5>&copy; 2018 Overture, LLC</h5>
+        </div>
+    </div>
+</div>

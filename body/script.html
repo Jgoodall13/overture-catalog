@@ -1,0 +1,85 @@
+<style>
+        .products_carousel .product_price {
+            text-align: center;
+            color: #000;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .products_carousel .product_price span {
+            color: #000;
+        }
+        .product_sku{
+            text-align: center;
+            color: #000;
+            font-size: 14px;	
+        }
+        </style>
+        <script type="text/javascript">
+        
+            $(function() {
+                $('#banner_slider').owlCarousel({
+                    navText: ['<span id="top-arrow-left" class="fa fa-angle-left"></span>','<span id="top-arrow-right" class="fa fa-angle-right"></span>'],
+                    items: 1,
+                    margin: 0,
+                    nav: true,
+                    dots: true,
+                    loop: true,
+                    rewind: true,
+                    autoHeight: false,
+                    autoplay: false,
+                    autoplaySpeed: 400,
+                    navSpeed: 400,
+                    dotsSpeed: 400,
+                    dragEndSpeed: 400,
+                    autoplayTimeout: 5000,
+                    responsive: {
+                        0: {
+                            nav: false
+                        },
+                        768: {
+                            nav: true
+                        }
+                    }
+                });
+        
+                $('.products_carousel_wrapper.banner_slider_theme').owlCarousel({
+                    navText: ['<span id="bottom-arrow-left" class="fa fa-angle-left"></span>','<span id="bottom-arrow-right" class="fa fa-angle-right"></span>'],
+                    items:4,
+                    margin: 0,
+                    nav: true,
+                    dots: false,
+                    loop: true,
+                    rewind: false,
+                    autoHeight: false,
+                    autoplay: false,
+                    autoplaySpeed: 400,
+                    navSpeed: 200,
+                    dotsSpeed: 200,
+                    dragEndSpeed: 200,
+                    autoplayTimeout: 5000,
+                    responsive:{
+                        0:{
+                            items: 1,
+                            slideBy: 1
+                        },
+                        480:{
+                            items: 2,
+                            slideBy: 2
+                        },
+                        768:{
+                            items: 3,
+                            slideBy: 3
+                        },
+                        992:{
+                            items: 4,
+                            slideBy: 4
+                        },
+                        1200: {
+                            items: 4,
+                            slideBy: 4
+                        }
+                    }
+                });
+            });
+            
+        </script>

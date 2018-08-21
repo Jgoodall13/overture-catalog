@@ -1,7 +1,127 @@
 <style>
+    @font-face {
+        font-family: Proxima;
+        src: url('/assets/fonts/ProximaNova-Regular.otf');
+    }
 
+    @font-face {
+        font-family: Proxima-bold;
+        src: url('/assets/fonts/ProximaNova-Bold.otf');
+    }
+
+    * {
+        font-family: Proxima;
+    }
+
+    #header {
+        position: fixed;
+        width: 100%;
+        z-index: 99;
+        background-color: #ffffff
+    }
+
+    #main-logo {
+        text-transform: uppercase;
+        color: #ef7521;
+        font-size: 39px;
+        font-family: Proxima-bold;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    #top-nav {
+        display: flex;
+        justify-content: space-between;
+        height: 45px;
+        align-items: center;
+    }
+
+    #search-button {
+        cursor: pointer;
+    }
+
+    #hidden-search {
+        display: none;
+        position: fixed;
+        background: #eeeeee;
+        z-index: 9;
+        width: 100%;
+        top: 55px;
+        padding: 10px 0;
+        text-align: right;
+    }
+
+    #search-bar {
+        padding-left: 5px;
+    }
+
+    #search-submit {
+        background: #ef7521;
+        border: none;
+        padding: 3px;
+        color: white;
+    }
+
+    .nav-link {
+        color: #ef7521
+    }
 </style>
 
-<div>
-    nope
+<div id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <a href="/" id="main-logo">overture</a>
+            </div>
+            <div class="col-md-9">
+                <ul id="top-nav">
+                    <li>
+                        <a class="nav-link" href="/category/27/apparel.html">Apparel</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="">Bags</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="">Drinkware</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="">Giveaways</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="">Home & Auto</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="">Office</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="">Outdoors</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="">Technology</a>
+                    </li>
+                    <li id="search-button">
+                        <i class="fa fa-search nav-link"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
+<div id="hidden-search">
+    <div class="container">
+        <form id="search_form" action="/lsearch.jhtm" method="post">
+            <input id="search-bar" type="text" name="keywords" placeholder="Search">
+            <button id="search-submit" type="submit">
+                <span>GO</span>
+            </button>
+        </form>
+    </div>
+</div>
+
+<script>
+    $('#search-button').click(function () {
+        $('#hidden-search').toggle();
+    })
+</script>
