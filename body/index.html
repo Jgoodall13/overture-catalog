@@ -6,6 +6,8 @@
 
     #pageBody {
         padding: 0;
+        margin: 0;
+        width: 100%;
     }
 
     #banner_slider_wrapper {
@@ -105,17 +107,17 @@
         padding: 5px 10px;
     }
 
-    .hover-blue:hover{
+    .hover-blue:hover {
         color: #86d1e6;
         background-color: white;
     }
 
-    .hover-green:hover{
+    .hover-green:hover {
         color: #d5d857;
         background-color: white;
     }
 
-    .hover-orange:hover{
+    .hover-orange:hover {
         color: #ef7521;
         background-color: white;
     }
@@ -143,18 +145,124 @@
         color: #f4f4f4;
     }
 
-    #top-arrow-left, #top-arrow-right {
+    #top-arrow-left,
+    #top-arrow-right {
         color: white;
         border: 1px solid white;
         border-radius: 50px;
         padding: 0 20px;
     }
 
-    #bottom-arrow-left, #bottom-arrow-right {
+    #bottom-arrow-left,
+    #bottom-arrow-right {
         color: #ef7521;
         border: 1px solid #ef7521;
         border-radius: 50px;
         padding: 0 20px;
+    }
+
+    #contact-box {
+        background-image: url('/assets/img/catalog/contact_img.jpg')
+    }
+
+    #form-box,
+    #form-sent-box {
+        display: none;
+    }
+
+    /*==========CONTACT BOX STYLES============*/
+
+    .info-contact {
+        font-size: 22px;
+        line-height: .8;
+        color: #7a7a7a;
+    }
+
+    .infoBreak-contact {
+        font-size: 22px;
+        line-height: .8;
+        padding-bottom: 20px;
+        color: #7a7a7a;
+    }
+
+    .socials-contact {
+        margin-top: 40px;
+    }
+
+    .social-contact {
+        color: #7a7a7a;
+        margin-right: 20px;
+    }
+
+    .contact-inputs-box {
+        margin: 10px 0
+    }
+
+    .contact-inputs {
+        width: 100%;
+        background-color: #eeeeee;
+        border: none;
+        padding: 15px 0 15px 10px;
+    }
+
+    .text-area-contact {
+        height: 175px
+    }
+
+    .contact-button-send {
+        color: white;
+        font-size: 18px;
+        padding: 11px 30px;
+        background-color: #ef7521;
+        border-radius: 7px;
+        font-family: 'Proxima-bold';
+        border: none;
+    }
+
+    .contact-button-send:hover {
+        background-color: #Ce5400;
+        color: white;
+        text-decoration: none;
+    }
+
+    .confirm-title {
+        color: #ef7521;
+        font-family: Proxima-bold;
+        font-size: 40px;
+    }
+
+    .confirm-p {
+        font-size: 17px;
+        color: gray;
+    }
+
+    .confirm-box {
+        text-align: center;
+        margin: 5% 23%
+    }
+
+    .contact-form-div {
+        margin-top: 60px;
+        margin-bottom: 60px
+    }
+
+    @media(max-width:991px) {
+        .hero-contact {
+            margin-top: 0;
+            height: 400px;
+        }
+        .contact-button-send {
+            width: 100%
+        }
+        .contact-fun {
+            font-size: 40px;
+        }
+        .contact-form-div {
+            margin-bottom: 10px
+        }
+        .contact-form {
+            margin-top: 40px;
+        }
     }
 </style>
 
@@ -187,6 +295,7 @@
         </div>
     </div>
 </div>
+
 <!-- ========== END Banner Slider ========== -->
 
 <!-- ========== Featured Items with inline styles ========== -->
@@ -335,3 +444,61 @@
         </div>
     </div>
 </div>
+
+<!-- ================ Contact Craziness ============== -->
+
+<div id="contact-box" class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Let's have some fun.</h4>
+                <p>Get in touch and we'll contact you to discuss how we can help boost your brand. We'll knock your socks off,
+                    guaranteed.</p>
+            </div>
+            <div id="button-box" class="col-md-6">
+                <button id='contact-button' class="contact-button-send">CONTACT US</button>
+            </div>
+            <div id="form-box" class="col-md-6">
+                <form class="contact-form row">
+                    <div class="col-xs-12 col-md-6 contact-inputs-box">
+                        <input class="contact-inputs" type="text" name="name" placeholder="Name*" required="" value="">
+                    </div>
+                    <div class="col-xs-12 col-md-6 contact-inputs-box">
+                        <input class="contact-inputs" type="text" name="company" placeholder="Company" value="">
+                    </div>
+                    <div class="col-xs-12 col-md-6 contact-inputs-box">
+                        <input class="contact-inputs" type="email" name="email" placeholder="Email*" required="" value="">
+                    </div>
+                    <div class="col-xs-12 col-md-6 contact-inputs-box">
+                        <input class="contact-inputs" type="text" name="phone" placeholder="Phone" value="">
+                    </div>
+                    <div class="col-xs-12 contact-inputs-box">
+                        <textarea class="contact-inputs text-area-contact" type="text" name="message" required="" placeholder="Message*"></textarea>
+                    </div>
+                    <div class="col-xs-12" style="text-align: right;">
+                        <button id="form-send" class="contact-button-send">Send</button>
+                    </div>
+                </form>
+            </div>
+            <div id="form-sent-box" class="col-md-6">
+                <div class="confirm-box">
+                    <h4 class="confirm-title">You have questions, we have answers!</h4>
+                    <p class="confirm-p">In fact, we'll have your answers within one business day! We look forward to speaking with you then!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#contact-button').click(function () {
+            $('#button-box').toggle()
+            $('#form-box').toggle()
+        })
+        $('#form-send').click(function () {
+            $('#form-box').toggle()
+            $('#form-sent-box').toggle()
+        })
+    });
+</script>
