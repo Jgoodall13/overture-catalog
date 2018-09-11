@@ -65,46 +65,243 @@
     }
 
     .nav-link {
-        color: #ef7521
+        color: #ef7521;
+        padding-bottom: 28px
+    }
+
+    .orange{
+        color: #ef7521;
+        font-size: 25px;
+    }
+
+    /* FOR ALL THE HIDDEN DROPDOWNS */
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        margin-top: 23px;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    #apparel-link:hover .dropdown-content {
+        display: block;
+    }
+
+    #bags-link:hover .dropdown-content {
+        display: block;
+    }
+
+    #drinkware-link:hover .dropdown-content {
+        display: block;
+    }
+
+    #giveaways-link:hover .dropdown-content {
+        display: block;
+    }
+
+    #home-auto-link:hover .dropdown-content {
+        display: block;
+    }
+
+    #office-link:hover .dropdown-content {
+        display: block;
+    }
+
+    #outdoors-link:hover .dropdown-content {
+        display: block;
+    }
+
+    #technology-link:hover .dropdown-content {
+        display: block;
+    }
+
+    #mobile-nav {
+        display: none;
+    }
+
+    #mobile-logo {
+        display: none;
+    }
+
+    /* MOBILE STUFF */
+
+    #mobile-nav {
+        text-align: right;
+    }
+
+    #mobile-dropdown {
+        display: none;
+    }
+
+    @media(max-width: 468px) {
+        #desktop-nav,
+        #desktop-logo {
+            display: none
+        }
+
+        #mobile-nav,
+        #mobile-logo {
+            display: block
+        }
+        .hero-image {
+            margin-top: 55px !important;
+        }
+        .hero-cta {
+            font-size: 14px !important;
+        }
+        .heros-box-three {
+            width: 47% !important;
+        }
     }
 </style>
 
 <div id="header">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div id="desktop-logo" class="col-md-3">
                 <a href="/" id="main-logo">overture</a>
             </div>
-            <div class="col-md-9">
+            <div id="desktop-nav" class="col-md-9">
                 <ul id="top-nav">
-                    <li>
+                    <li id="apparel-link">
                         <a class="nav-link" href="/category/27/apparel.html">Apparel</a>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                            <a href="#">Link 4</a>
+                            <a href="#">Link 5</a>
+                        </div>
                     </li>
-                    <li>
+                    <li id="bags-link">
                         <a class="nav-link" href="">Bags</a>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                            <a href="#">Link 4</a>
+                            <a href="#">Link 5</a>
+                        </div>
                     </li>
-                    <li>
+                    <li id="drinkware-link">
                         <a class="nav-link" href="">Drinkware</a>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                            <a href="#">Link 4</a>
+                            <a href="#">Link 5</a>
+                        </div>
                     </li>
-                    <li>
+                    <li id="giveaways-link">
                         <a class="nav-link" href="">Giveaways</a>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                            <a href="#">Link 4</a>
+                            <a href="#">Link 5</a>
+                        </div>
                     </li>
-                    <li>
+                    <li id="home-auto-link">
                         <a class="nav-link" href="">Home & Auto</a>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                            <a href="#">Link 4</a>
+                            <a href="#">Link 5</a>
+                        </div>
                     </li>
-                    <li>
+                    <li id="office-link">
                         <a class="nav-link" href="">Office</a>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                            <a href="#">Link 4</a>
+                            <a href="#">Link 5</a>
+                        </div>
                     </li>
-                    <li>
+                    <li id="outdoors-link">
                         <a class="nav-link" href="">Outdoors</a>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                            <a href="#">Link 4</a>
+                            <a href="#">Link 5</a>
+                        </div>
                     </li>
-                    <li>
+                    <li id="technology-link">
                         <a class="nav-link" href="">Technology</a>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                            <a href="#">Link 4</a>
+                            <a href="#">Link 5</a>
+                        </div>
                     </li>
                     <li id="search-button">
-                        <i class="fa fa-search nav-link"></i>
+                        <i class="fa fa-search"></i>
                     </li>
                 </ul>
+            </div>
+            <div id="mobile-logo" class="col-xs-6">
+                <a href="/" id="main-logo">overture</a>
+            </div>
+            <div id="mobile-nav" class="col-xs-6">
+                <i class="fa fa-bars" style="color: #ef7521; font-size: 2em; margin-top: 10px;"></i>
+                <div id="mobile-dropdown">
+                    <ul>
+                        <li>
+                            <a href="" class="orange">Apparel</a>
+                        </li>
+                        <br />
+                        <li>
+                            <a href="" class="orange">Bags</a>
+                        </li>
+                        <br />
+                        <li>
+                            <a href="" class="orange">Drinkware</a>
+                        </li>
+                        <br />
+                        <li>
+                            <a href="" class="orange">Giveaways</a>
+                        </li>
+                        <br />
+                        <li>
+                            <a href="" class="orange">Home & Auto</a>
+                        </li>
+                        <br />
+                        <li>
+                            <a href="" class="orange">Office</a>
+                        </li>
+                        <br />
+                        <li>
+                            <a href="" class="orange">Outdoors</a>
+                        </li>
+                        <br />
+                        <li>
+                            <a href="" class="orange">Technology</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -123,5 +320,9 @@
 <script>
     $('#search-button').click(function () {
         $('#hidden-search').toggle();
+    })
+
+    $('#mobile-nav').click(function () {
+        $('#mobile-dropdown').slideToggle();
     })
 </script>

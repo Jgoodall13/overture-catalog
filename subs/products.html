@@ -1,0 +1,29 @@
+<style>
+    .addToQuote_btn{
+        background-image: none;
+        border-color: none;
+        border: 1px solid #ef7521;
+        background-color: #ef7521;
+        font-size: 18px;
+    }
+
+    .addToQuote_btn:hover{
+        background-color: white;
+        color: #ef7521;
+        border: 1px solid #ef7521
+    }
+
+    .accordion_box:nth-child(1), .accordion_box:nth-child(2),{
+        display: none;
+    }
+
+</style>
+
+<script>
+    $(document).ready(function(){
+        $('.total_price_wrapper').closest('.col-sm-6').css('display', 'none')
+        $('.addToCart_btn_wrapper').css('display', 'none');
+        $('.addToList_btn').closest('.col-sm-6').css('display', 'none')
+    })
+
+</script>

@@ -272,6 +272,31 @@
             padding: 0;
         }
     }
+
+    @media(max-width: 768px){
+        .hero-text{
+            display: none;
+        }
+        #hidden-search{
+            top: 110px;
+        }
+        .heros-box-one{
+            top: 81%;
+        }
+        .heros-box-two{
+            top: 81%;
+            width: 45%;
+        }
+        .heros-box-three{
+            top: 81%;
+        }
+    }
+
+    @media(max-width: 468px){
+        .cup-box, .hat-box, .charger-box{
+            margin: 0 20px 20px 20px
+        }
+    }
 </style>
 
 <div id="banner_slider_wrapper">
@@ -309,19 +334,19 @@
 <!-- ========== Featured Items with inline styles ========== -->
 <div class="container" style="margin-top: 50px">
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-4 cup-box">
             <img class="featured-items" src="/assets/img/catalog/cups.jpg" alt="">
             <div class="featured-items-cta">
                 <a class="featured-items-button" href="">VIEW ITEM</a>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 hat-box">
             <img class="featured-items" src="/assets/img/catalog/caps.jpg" alt="">
             <div class="featured-items-cta">
                 <a class="featured-items-button" href="">VIEW ITEM</a>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 charger-box">
             <img class="featured-items" src="/assets/img/catalog/power.jpg" alt="">
             <div class="featured-items-cta">
                 <a class="featured-items-button" href="">VIEW ITEM</a>
