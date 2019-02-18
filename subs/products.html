@@ -1,5 +1,5 @@
 <style>
-    .addToQuote_btn{
+    .addToQuote_btn {
         background-image: none;
         border-color: none;
         border: 1px solid #ef7521;
@@ -7,23 +7,45 @@
         font-size: 18px;
     }
 
-    .addToQuote_btn:hover{
+    .addToQuote_btn:hover {
         background-color: white;
         color: #ef7521;
         border: 1px solid #ef7521
     }
 
-    .accordion_box:nth-child(1), .accordion_box:nth-child(2),{
+    .accordion_box:nth-child(2),
+    .accordion_box:nth-child(3) {
         display: none;
     }
 
+    a.btn.addToList_btn {
+        display: none;
+    }
+
+    div#floatingPricingSummaryBox {
+        display: none;
+    }
+
+    div#artWork_wrapper {
+        display: none;
+    }
+
+    div#configBox_wrapper_0 {
+        display: none;
+    }
+
+    div#productContactUs {
+        display: none;
+    }
+
+    .product_quick_links {
+        display: none;
+    }
 </style>
 
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('.total_price_wrapper').closest('.col-sm-6').css('display', 'none')
         $('.addToCart_btn_wrapper').css('display', 'none');
-        $('.addToList_btn').closest('.col-sm-6').css('display', 'none')
     })
-
 </script>
