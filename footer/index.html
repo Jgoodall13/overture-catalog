@@ -47,8 +47,39 @@
         text-align: center
     }
 
-    .info, .infoBreak, .footer-link{
+    .info,
+    .infoBreak,
+    .footer-link {
         font-weight: 500;
+    }
+
+    /* GLOBALS */
+
+    h1.category_head_name {
+        color: #EF7521;
+        text-transform: uppercase;
+    }
+
+    .sub_categories_wrapper .sub_category_wrapper .sub_category_name_wrapper {
+        min-height: 30px;
+        line-height: 30px;
+        background: #EF7521;
+    }
+
+    .luceneSearchWrapper .luceneSearchBox .luceneSearchFilters .filterGroupValues .luceneSearchFilter .filterValues .filterValue a {
+        color: #898A8D;
+    }
+
+    .luceneSearchWrapper .luceneSearchBox .luceneSearchFilters .filterGroupValues .luceneSearchFilter .filterTitle {
+        background: #ef7521;
+    }
+
+    div#sidebar {
+        margin-top: 85px;
+    }
+
+    .addToQuote_btn {
+        font-size: 14px;
     }
 
 
@@ -70,11 +101,19 @@
             margin-left: 5%;
             margin-right: 5%;
         }
+        h1.category_head_name {
+            color: #EF7521;
+            margin-top: 50px;
+        }
     }
 
     @media(max-width:767px) {
         .fa.fa-facebook {
             margin-left: 0 !important;
+        }
+        h1.category_head_name {
+            color: #EF7521;
+            margin-top: 86px;
         }
     }
 </style>
@@ -93,14 +132,20 @@
             </div>
         </div>
         <div class="col-md-3">
-            <img src='/assets/img/catalog/map.svg' alt="map" >
+            <img src='/assets/img/catalog/map.svg' alt="map">
             <p class="map-paragraph">Headquarted in Chicago with over 200 warehouses nationwide</p>
         </div>
         <div class="col-md-5 footer-right-nav">
             <div class="footer-nav-links" style='display: flex; justify-content: flex-end'>
-                <h5 class="footer-link"><a href="/category.jhtm?cid=20167" class="footer-link">Contact Us</a></h5>
-                <h5 class="footer-link"><a href="/category.jhtm?cid=20166" class="footer-link">Privacy Policy</a></h5>
-                <h5 class="footer-link"><a href="https://overturepromotions.herokuapp.com/careers" class="footer-link" target="blank">Careers</a></h5>
+                <h5 class="footer-link">
+                    <a href="/category.jhtm?cid=20167" class="footer-link">Contact Us</a>
+                </h5>
+                <h5 class="footer-link">
+                    <a href="/category.jhtm?cid=20166" class="footer-link">Privacy Policy</a>
+                </h5>
+                <h5 class="footer-link">
+                    <a href="https://overturepromotions.herokuapp.com/careers" class="footer-link" target="blank">Careers</a>
+                </h5>
             </div>
             <div class="socials" style='padding: 40px 0'>
                 <a href="https://www.facebook.com/OverturePromotions/" target="blank">
@@ -120,3 +165,13 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        $(
+                '#product_details_15 .details_desc .configBox_wrapper .configBox_title.has-icon .configBox_icon img:nth-child(0)'
+            )
+
+            .attr('src', '/assets/img/catalog/step1.png')
+    })
+</script>

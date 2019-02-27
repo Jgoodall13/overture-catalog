@@ -116,6 +116,10 @@
         background-color: white;
     }
 
+    .section_title {
+        color: #EF7521;
+    }
+
     .hover-green:hover {
         color: #d5d857;
         background-color: white;
@@ -154,7 +158,13 @@
         color: white;
         border: 1px solid white;
         border-radius: 50px;
-        padding: 0 20px;
+        font-size: 40px;
+        padding: 0 13px;
+    }
+
+    #top-arrow-left:hover,
+    #top-arrow-right:hover {
+        background: #7a7a7a;
     }
 
     #bottom-arrow-left,
@@ -162,7 +172,22 @@
         color: #ef7521;
         border: 1px solid #ef7521;
         border-radius: 50px;
-        padding: 0 20px;
+        font-size: 40px;
+        padding: 0 13px;
+    }
+
+    #bottom-arrow-left:hover,
+    #bottom-arrow-right:hover {
+        background: #ef7521;
+        color: #fff;
+    }
+
+    .banner_slider_theme .owl-dots .owl-dot.active span {
+        background: #898A8D;
+    }
+
+    .banner_slider_theme .owl-dots .owl-dot span {
+        background: #fff;
     }
 
     #contact-box {
@@ -179,6 +204,7 @@
     #form-box,
     #form-sent-box {
         display: none;
+        padding-bottom: 25px;
     }
 
     /*==========CONTACT BOX STYLES============*/
@@ -227,6 +253,16 @@
         text-decoration: none;
     }
 
+    i.fa.fa-close {
+        font-size: 3em;
+        color: #ef7521;
+    }
+
+    i.fa.fa-close:hover {
+        color: #Ce5400;
+        cursor: pointer;
+    }
+
     .confirm-title {
         color: #ef7521;
         font-family: Proxima-bold;
@@ -246,6 +282,20 @@
     .contact-form-div {
         margin-top: 60px;
         margin-bottom: 60px
+    }
+
+    img.img-responsive.mobile-hero {
+        display: none;
+    }
+
+    @media(max-width: 1024px) {
+        .hero-cta {
+            font-size: 24px;
+        }
+
+        .hero-text {
+            font-size: 30px;
+        }
     }
 
     @media(max-width:991px) {
@@ -268,33 +318,54 @@
         .hero-image {
             margin-top: 110px;
         }
-        #top-nav{
+        #top-nav {
             padding: 0;
         }
+
     }
 
-    @media(max-width: 768px){
-        .hero-text{
+    @media(max-width: 768px) {
+        .hero-text {
             display: none;
         }
-        #hidden-search{
+        #hidden-search {
             top: 110px;
         }
-        .heros-box-one{
+        .heros-box-one {
             top: 81%;
         }
-        .heros-box-two{
+        .heros-box-two {
             top: 81%;
-            width: 45%;
         }
-        .heros-box-three{
+        .heros-box-three {
             top: 81%;
+        }
+        div#desktop-logo {
+            text-align: center;
+        }
+        img.img-responsive.hero-image {
+            display: none;
+        }
+        img.img-responsive.mobile-hero {
+            display: block;
+            margin-top: 119px;
+        }
+        .heros-box-one,
+        .heros-box-two,
+        .heros-box-three {
+            width: 100% !important
         }
     }
 
-    @media(max-width: 468px){
-        .cup-box, .hat-box, .charger-box{
+    @media(max-width: 468px) {
+        .cup-box,
+        .hat-box,
+        .charger-box {
             margin: 0 20px 20px 20px
+        }
+
+        img.img-responsive.mobile-hero {
+            margin-top: 65px;
         }
     }
 </style>
@@ -309,6 +380,7 @@
                         <a class="hero-cta hover-blue" href="/category/670/bags.html">SHOP BAGS</a>
                     </div>
                     <img src="/assets/img/catalog/hero1.png" class="img-responsive hero-image">
+                    <img src="/assets/img/catalog/small_1.jpg" class="img-responsive mobile-hero" alt="">
                 </div>
                 <div class="slide_item slide-two" data-hash="slide2">
                     <div class="heros-box-two">
@@ -316,6 +388,7 @@
                         <a class="hero-cta hover-green" href="/category/132/drinkware.html">SHOP DRINKWARE</a>
                     </div>
                     <img src="/assets/img/catalog/hero2.png" class="img-responsive hero-image">
+                    <img src="/assets/img/catalog/small_2.jpg" class="img-responsive mobile-hero" alt="">
                 </div>
                 <div class="slide_item slide-three" data-hash="slide3">
                     <div class="heros-box-three">
@@ -323,6 +396,7 @@
                         <a class="hero-cta hover-orange" href="/category/267/office.html">SHOP OFFICE</a>
                     </div>
                     <img src="/assets/img/catalog/hero3.png" class="img-responsive hero-image">
+                    <img src="/assets/img/catalog/small_3.jpg" class="img-responsive mobile-hero" alt="">
                 </div>
             </div>
         </div>
@@ -356,51 +430,51 @@
 </div>
 
 <!-- ============== Featured Brands =============== -->
-<div class="section_title_wrapper clearfix" >
+<div class="section_title_wrapper clearfix">
     <h3 class="section_title text-center">FEATURED BRANDS</h3>
 </div>
 <div class="row">
     <div class="col-sm-10 center-block" style="float:none; margin-top: 30px; margin-bottom: 55px;">
         <div class="products_carousel_wrapper banner_slider_theme owl-carousel">
             <div class="product">
-                    <div class="product_image_div">
-                        <img class="item" src="/assets/img/catalog/nike.svg">
-                    </div>
+                <div class="product_image_div">
+                    <img class="item" src="/assets/img/catalog/nike.svg">
+                </div>
             </div>
             <div class="product">
-                    <div class="product_image_div">
-                        <img class="item" src="/assets/img/catalog/underarmour.svg">
-                    </div>
+                <div class="product_image_div">
+                    <img class="item" src="/assets/img/catalog/underarmour.svg">
+                </div>
             </div>
             <div class="product">
-                    <div class="product_image_div">
-                        <img class="item" src="/assets/img/catalog/patagonia.svg">
-                    </div>
+                <div class="product_image_div">
+                    <img class="item" src="/assets/img/catalog/patagonia.svg">
+                </div>
             </div>
             <div class="product">
-                    <div class="product_image_div">
-                        <img class="item" src="/assets/img/catalog/adidas.svg">
-                    </div>
+                <div class="product_image_div">
+                    <img class="item" src="/assets/img/catalog/adidas.svg">
+                </div>
             </div>
             <div class="product">
-                    <div class="product_image_div">
-                        <img class="item" src="/assets/img/catalog/bellacanvas.svg">
-                    </div>
+                <div class="product_image_div">
+                    <img class="item" src="/assets/img/catalog/bellacanvas.svg">
+                </div>
             </div>
             <div class="product">
-                    <div class="product_image_div">
-                        <img class="item" src="/assets/img/catalog/callaway.svg">
-                    </div>
+                <div class="product_image_div">
+                    <img class="item" src="/assets/img/catalog/callaway.svg">
+                </div>
             </div>
             <div class="product">
-                    <div class="product_image_div">
-                        <img class="item" src="/assets/img/catalog/camelbak.svg">
-                    </div>
+                <div class="product_image_div">
+                    <img class="item" src="/assets/img/catalog/camelbak.svg">
+                </div>
             </div>
             <div class="product">
-                    <div class="product_image_div">
-                        <img class="item" src="/assets/img/catalog/northface.svg">
-                    </div>
+                <div class="product_image_div">
+                    <img class="item" src="/assets/img/catalog/northface.svg">
+                </div>
             </div>
         </div>
     </div>
@@ -421,6 +495,9 @@
                 <button id='contact-button' class="contact-button-send">CONTACT US</button>
             </div>
             <div id="form-box" class="col-md-6">
+                <div style="text-align: right">
+                    <i id="contact-close" class="fa fa-close"></i>
+                </div>
                 <form class="contact-form row" role="form" id="crm-form" onsubmit="return validateForm()" method="post" action=http://www.overturemarket.com/formProcessor.jhtm
                     enctype="multipart/form-data" accept-charset="UTF-8">
                     <div class="col-xs-12 col-md-6 contact-inputs-box">
@@ -470,6 +547,10 @@
         $('#form-send').click(function () {
             $('#form-box').toggle()
             $('#form-sent-box').toggle()
+        })
+        $('#contact-close').click(function(){
+            $('#button-box').toggle()
+            $('#form-box').toggle()
         })
     });
 </script>
